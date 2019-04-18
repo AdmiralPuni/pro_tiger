@@ -16,7 +16,7 @@
             <tr class="tiger-head-nav">
                 <td><a href="index.php"><button>Home</button></a></td>
                 <td><a href="image.php"><button>Image</button></a></td>
-                <td><a href="#"><button>Link</button></a></td>
+                <td><a href="view.php?id=1"><button>Link</button></a></td>
             </tr>
             <tr class="tiger-head-nav">
                 <td><a href="#"><button>Link</button></a></td>

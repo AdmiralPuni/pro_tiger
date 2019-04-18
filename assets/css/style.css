@@ -114,8 +114,9 @@
     grid-gap: 15px;
     width:100%;
 }
-.tiger-pillar-pillar{
-   
+.tiger-pillar-pillar a{
+	color:white;
+	text-decoration: none;
 }
 .tiger-pillar-image{
     border:1px solid white;
@@ -128,7 +129,7 @@
 .tiger-pillar-image .desc{
     padding:15px;
     border-top: 1px solid white;
-    margin-top:-5px;
+    margin-top:-5.9px;
 }
 
 img{
