@@ -1,7 +1,7 @@
 <?php
 	require_once('head.php');
 	require_once('config.php');
-	$result = $conn->query('select id,filename from tb_image where category_id=1 LIMIT 3');
+	$result = $conn->query('select id,filename from tb_image where category_id=' . $_GET['id']);
 	$pillar = 0;
 	$Pillar_item = array();
 	$pillar_item[0] = '';
@@ -15,7 +15,7 @@
 		$pillar_item[$pillar] .= '<div class="tiger-pillar-image">
 									<img src="main/thumb/tkmiz/' . $row['filename'] . '" alt="">
 									<div class="desc">
-										<a href="image.php?id=' . $row['filename'] . '">' . $row['filename'] . '</a>
+										<a href="image.php?id=' . $row['id'] . '">' . $row['filename'] . '</a>
 									</div>
 								</div>';
 		//echo $pillar . ' ' . $file . '<br>';
