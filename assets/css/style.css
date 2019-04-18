@@ -1,0 +1,160 @@
+.tiger-hull{
+    max-width: 1250px;
+    border:1px solid white;
+    margin:0 auto;
+    text-align: justify;
+    background-color:#21377a;
+    color:white;
+}
+
+/* Header */
+.tiger-head td{
+    padding:0;
+}
+.tiger-head{
+    background-color:#21377a;
+    color:white;
+    width:100%;
+    border-bottom:1px solid white;
+    padding:15px;
+    border-collapse: collapse;
+}
+.tiger-head-head td{
+    padding-left:15px;
+}
+.tiger-head-nav{
+    border-top:1px solid white;
+}
+.tiger-head-nav a button{
+    background:none;
+    color:white;
+    border:none;
+    width:100%;
+    height:30px;
+    font-size:15px;
+    cursor:pointer;
+}
+.tiger-head-nav a button:hover{
+    background:white;
+    color:black;
+}
+.tiger-head-nav td:nth-child(2){
+    border-left:1px solid white;
+    border-right:1px solid white;
+}
+.tiger-head-nav td{
+    width:33.3333333%;
+}
+/* End Header */
+
+/* Main */
+.tiger-main{
+    padding:15px;
+}
+/* End Main */
+
+/* Footer */
+.tiger-footer td{
+    width:33.3333333333%;
+    padding:0;
+    text-align: center;
+}
+.tiger-footer-middle{
+    border-left:1px solid white;
+    border-right:1px solid white;
+}
+.tiger-footer{
+    width:100%;
+    border-top:1px solid white;
+    padding:15px;
+    border-collapse: collapse;
+}
+.tiger-footer ul{
+    list-style-type:none;
+}
+.tiger-footer{
+    width:100%;
+}
+
+/* End Footer */
+
+.tiger-image{
+    width:100%;
+    border:1px solid white;
+}
+.tiger-image-center{
+    max-width: 625px;
+    margin:0 auto;
+    margin-top:15px;
+    margin-bottom: 15px;
+}
+.tiger-image-desc{
+    border-top:1px solid white;
+    padding:15px;
+}
+.tiger-filelist{
+    width:100%;
+    border-collapse: collapse;
+    border:1px solid white;
+    margin-top:15px;
+    
+}
+.tiger-filelist td{
+    padding: 15px;
+    border:1px solid white;
+}
+.tiger-filelist td:nth-child(1){
+    color:red;
+    width:70%;
+}
+
+.tiger-pillar{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 15px;
+    width:100%;
+}
+.tiger-pillar-pillar{
+   
+}
+.tiger-pillar-image{
+    border:1px solid white;
+    width:100%;
+    margin-bottom: 15px;
+}
+.tiger-pillar-image img{
+    width:100%;
+}
+.tiger-pillar-image .desc{
+    padding:15px;
+    border-top: 1px solid white;
+    margin-top:-5px;
+}
+
+img{
+    width:100%;
+}
+html{
+    font-family: Calibri;
+    line-height: 1.4em;
+}
+body{
+    margin:0;
+    padding:15px;
+    background-image: url("../images/1546740127619.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+h1,h2,h3,h4,h5{
+    margin:0;
+    line-height: 1.8em;
+}
+hr{
+    margin-top:7.5px;
+    margin-bottom:7.5px;
+}
+ol,ul{
+    padding-left:0;
+}
