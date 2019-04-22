@@ -9,7 +9,7 @@
         <img src="main/original/tkmiz/<?= $row['filename'] ?>" alt="">
         <div class="tiger-image-desc">
 			<?php
-				echo $row['filename'] . '<br>' . $row['description'] . '<br>' . number_format(filesize('main/original/tkmiz/' . $row['filename'])/ 1048576, 2) . ' MB';
+				echo $row['filename'] . '<br>' . number_format(filesize('main/original/tkmiz/' . $row['filename'])/ 1048576, 2) . ' MB' . '<br>' . $row['description'];
 			?>
         </div>
     </div>
