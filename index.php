@@ -19,7 +19,7 @@
     diam
     lacinia nec. Nunc suscipit augue quis dolor dignissim, eu gravida diam pulvinar.
     <div class="tiger-image tiger-image-center">
-        <img src="assets/images/1554656771178.png" alt="">
+        <img src="assets/images/1555687257777.jpg" alt="">
         <div class="tiger-image-desc">
             100 Euro
         </div>

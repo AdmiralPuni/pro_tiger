@@ -34,6 +34,6 @@
             <tr class="tiger-head-nav">
                 <td><a href="index.php"><button>Home</button></a></td>
 				<td><a href="catalog.php"><button>Catalog</button></a></td>
-                <td><a href="gallery.php"><button>Image</button></a></td>
+                <td><a href="search.php"><button>Search</button></a></td>
             </tr>
         </table>

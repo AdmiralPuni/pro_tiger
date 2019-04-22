@@ -6,10 +6,10 @@
 ?>
 <div class="tiger-main">
 	<div class="tiger-image">
-        <img src="main/original/tkmiz/<?= $row['filename'] ?>" alt="">
+        <img src="main/original/<?= $row['folder'] ?>/<?= $row['filename'] ?>" alt="">
         <div class="tiger-image-desc">
 			<?php
-				echo $row['filename'] . '<br>' . number_format(filesize('main/original/tkmiz/' . $row['filename'])/ 1048576, 2) . ' MB' . '<br>' . $row['description'];
+				echo $row['filename'] . '<br>' . number_format(filesize('main/original/' . $row['folder'] . '/' . $row['filename'])/ 1048576, 2) . ' MB' . '<br>' . $row['description'];
 			?>
         </div>
     </div>
