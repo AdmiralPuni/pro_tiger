@@ -2,7 +2,7 @@
 	require_once('../config.php');
     function compress($source, $destination, $quality) {
 
-        $info = getimagesize($source);
+		$info = getimagesize($source);
 
         if ($info['mime'] == 'image/jpeg') 
             $image = imagecreatefromjpeg($source);
@@ -11,6 +11,8 @@
         elseif ($info['mime'] == 'image/png') 
             $image = imagecreatefrompng($source);
 
+		
+		$image = imagescale($image,$info[0]/3,$info[1]/3); 
         imagejpeg($image, $destination, $quality);
 
         return $destination;
@@ -35,7 +37,7 @@
                     continue;
                 }
                 echo 'original/' . $fn . '/' . $file . '<br>';
-                compress('original/' . $fn . '/' . $file, 'thumb/' . $fn . '/' . $file, 1);
+                compress('original/' . $fn . '/' . $file, 'thumb/' . $fn . '/' . $file, 30);
             }
         break;
         case 2:
@@ -69,7 +71,7 @@
         default:
             echo 'default.';
         break;
-    }
+	}
 ?>
 <!DOCTYPE html>
 <html lang="en">
