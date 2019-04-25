@@ -35,7 +35,7 @@
                     continue;
                 }
                 echo 'original/' . $fn . '/' . $file . '<br>';
-                compress('original/' . $fn . '/' . $file, 'thumb/' . $fn . '/' . $file, 10);
+                compress('original/' . $fn . '/' . $file, 'thumb/' . $fn . '/' . $file, 1);
             }
         break;
         case 2:
