@@ -90,7 +90,6 @@
     margin-bottom: 15px;
 }
 .tiger-image-desc{
-	margin-top:-5.9px;
     border-top:1px solid white;
     padding:15px;
 }
@@ -162,7 +161,6 @@
 .tiger-pillar-image .desc{
     padding:15px;
     border-top: 1px solid white;
-    margin-top:-5.9px;
 }
 .tiger-pillar-pillar{
 	max-width:396px;
@@ -210,5 +208,8 @@ textarea{
 }
 td{
     vertical-align: top;
+}
+hr{
+	background-color:white;
 }
 /* TQHXzLX7ek5c^fGXAkuW */

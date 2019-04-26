@@ -1,4 +1,7 @@
 <?php
+	if(!is_numeric($_GET['id'])){
+		header('location:index.php');
+	}
 	require_once('head.php');
 	require_once('config.php');
 	$result = mysqli_query($conn,'select * from v_image_detail where id=' . $_GET['id']);

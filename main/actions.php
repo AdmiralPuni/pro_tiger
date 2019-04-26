@@ -1,18 +1,18 @@
 <?php 
 	require_once('../config.php');
-    function compress($source, $destination, $quality) {
-
+    function compress($source, $destination, $quality){
 		$info = getimagesize($source);
 
-        if ($info['mime'] == 'image/jpeg') 
-            $image = imagecreatefromjpeg($source);
-        elseif ($info['mime'] == 'image/gif') 
-            $image = imagecreatefromgif($source);
-        elseif ($info['mime'] == 'image/png') 
-            $image = imagecreatefrompng($source);
-
-		
-		$image = imagescale($image,$info[0]/3,$info[1]/3); 
+        if($info['mime'] == 'image/jpeg'){
+			$image = imagecreatefromjpeg($source);
+		}
+        elseif($info['mime'] == 'image/gif'){
+			$image = imagecreatefromgif($source);
+		}
+        elseif($info['mime'] == 'image/png'){
+			$image = imagecreatefrompng($source);
+		}
+		$image = imagescale($image,$info[0]/4,$info[1]/4); 
         imagejpeg($image, $destination, $quality);
 
         return $destination;
@@ -47,7 +47,10 @@
             $coll = array();
             while($row = $result->fetch_assoc()){
                 $coll[] = $row['filename'];
-            }
+			}
+			$query = 'select id from tb_category where folder="' . $fn . '"';
+			$fnid = mysqli_fetch_assoc(mysqli_query($conn,$query));
+			echo mysqli_error($conn);
             foreach($files as $file) {
                 if($time<>0){
                     $time--;
@@ -55,9 +58,9 @@
                 }
                 if(in_array($file,$coll)){
                     continue;
-                }
-                //echo 'insert into tb_image values(NULL,1,"' . $file . '",NULL)' . '<br>';
-                if(mysqli_query($conn,'insert into tb_image values(NULL,2,"' . $file . '","")')){
+				}
+				
+                if(mysqli_query($conn,'insert into tb_image values(NULL,' . $fnid['id'] . ',"' . $file . '","")')){
                     echo 'added' . '<br>';
                 }
                 else{
@@ -79,10 +82,14 @@
     <title>ActionSet</title>
 </head>
 <body>
+<?php
+	$files = scandir('original/');
+?>
     <form action="" method="POST">
         <select name="folder" id="folder">
-            <option value="tkmiz">tkmiz</option>
-            <option value="2hu">2hu</option>
+			<?php for ($i=2; $i<sizeof($files) ; $i++): ?>
+            <option value="<?= $files[$i] ?>"><?= $files[$i] ?></option>
+			<?php endfor ?>
             <option value="3" selected>Nothing</option>
         </select>
         <select name="actionid" id="actionid">

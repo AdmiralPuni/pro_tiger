@@ -20,7 +20,7 @@
                                 echo '<h1>Die Reaktion Bild und Kunstgalerie</h1>';
                             break;
                             case 3:
-                                echo '<h1>La imagen de reacción y galería de arte.</h1>';
+                                echo '<h1>La imagen de reacción y galería de arte</h1>';
                             break;
                             case 4:
                                 echo '<h1>l\'image de réaction et galerie d\'art</h1>';
