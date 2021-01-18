@@ -1,11 +1,16 @@
 .tiger-hull{
-    max-width: 1250px;
+    max-width: 100%;
     border:1px solid white;
     margin:0 auto;
     text-align: justify;
     background-color:#21377a;
     color:white;
+    
 }
+/*
+body::-webkit-scrollbar {
+    display: none;
+}*/
 
 /* Header */
 .tiger-head td{
@@ -142,9 +147,10 @@
 /* PILLAR */
 .tiger-pillar{
     display: grid;
-    grid-template-columns: auto auto auto;
-    grid-gap: 15px;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
     width:100%;
+    margin: 0 auto;
 }
 .tiger-pillar-pillar a{
 	color:white;
@@ -163,8 +169,8 @@
     border-top: 1px solid white;
 }
 .tiger-pillar-pillar{
-	max-width:396px;
-	min-width:396px;
+	max-width:100%;
+	min-width:100%;
 }
 /* END */
 

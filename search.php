@@ -2,8 +2,9 @@
 	require_once('head.php');
 	require_once('config.php');
 	if(isset($_GET['s'])){
-		$que = $conn->prepare('select id,filename,description from tb_image where description regexp(?)');
-		$que->bind_param("s",$tags);
+		$que = $conn->prepare('select a.id,filename,a.description from tb_image a, tb_category b where a.category_id=b.id and b.folder=? and a.description regexp(?)');
+		$que->bind_param("ss",$folder,$tags);
+		$folder = $_GET['folder'];
 		$tags = $_GET['tags'];
 		$que->execute();
 		$que->bind_result($id,$filename,$description);
@@ -18,9 +19,6 @@
 		while($que->fetch()) {
 			if($pillar==3){
 				$pillar=0;
-			}
-			if(!file_exists('main/thumb/' . $_GET['folder'] . '/' . $filename)){
-				continue;
 			}
 			$pillar_item[$pillar] .= '<div class="tiger-pillar-image">
 										<img src="main/thumb/' . $_GET['folder'] . '/' . $filename . '" alt="">

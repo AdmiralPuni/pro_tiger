@@ -11,18 +11,24 @@
 	$pillar_item[0] = '';
 	$pillar_item[1] = '';
 	$pillar_item[2] = '';
+	$pillar_item[3] = '';
 
 	while($row = $result->fetch_assoc()) {
-		if($pillar==3){
+		if($pillar==4){
 			$pillar=0;
 		}
 		$pillar_item[$pillar] .= '<div class="tiger-pillar-image">
-									<img src="main/thumb/' . $folder['folder'] . '/' . $row['filename'] . '" alt="">
-									<div class="desc">
-										<a href="image.php?id=' . $row['id'] . '">' . $row['filename'] . '</a>
-										<br>' . $row['description'] . '
-									</div>
-								</div>';
+			<a href="image.php?id=' . $row['id'] . '">
+									<img src="main/thumb/' . $folder['folder'] . '/' . $row['filename'] . '" alt=""></a/>
+									';
+		if(!empty($row['description'])){
+			$pillar_item[$pillar] .= '<div class="desc">' . $row['description'] . '</div>
+			</div>';
+		}
+		else{
+			$pillar_item[$pillar] .= '</div>';
+		}
+									
 		//echo $pillar . ' ' . $file . '<br>';
 		$pillar++;
     }
@@ -37,6 +43,9 @@
         </div>
         <div class="tiger-pillar-pillar">
             <?= $pillar_item[2] ?>
+        </div>
+		<div class="tiger-pillar-pillar">
+            <?= $pillar_item[3] ?>
         </div>
     </div>
 </div>

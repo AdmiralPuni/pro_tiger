@@ -12,7 +12,7 @@
         elseif($info['mime'] == 'image/png'){
 			$image = imagecreatefrompng($source);
 		}
-		$image = imagescale($image,$info[0]/4,$info[1]/4); 
+		$image = imagescale($image,$info[0]/3,$info[1]/3); 
         imagejpeg($image, $destination, $quality);
 
         return $destination;
